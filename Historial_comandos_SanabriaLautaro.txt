@@ -1,0 +1,60 @@
+    1  sudo apt update
+    2  sudo apt install git -y
+    3  git --version
+    4  ssh-keygen
+    5  cat $HOME/.ssh/*.pub
+    6  cd
+    7  mkdir repogit
+    8  cd repogit
+    9  git clone git@github.com:lautarosanabriauniversidad-cyber/TP_AySO.git
+   10  cd TP_AySO
+   11  pwd
+   12  ls -l
+   13  cat /etc/passwd
+   14  man grep
+   15  grep UBUNTU /etc/passwd
+   16  grep ubuntu /etc/passwd
+   17  grep -i Ubuntu /etc/passwd
+   18  grep -i ubuntu /etc/passwd | awk -F ':' '{print $2}' > datos_usuario.txt
+   19  whoami
+   20  echo "Usuario=$(whoami)" >> datos_usuario.txt
+   21  cat datos_usuario.txt
+   22  git config --global user.email "lautarosanabriauniversidad@gmail.com"
+   23  git config --global user.name "lautarosanabriauniversidad-cyber"
+   24  git add .
+   25  git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+   26  git status
+   27  grep "model name" /proc/cpuinfo | head -n1 > info_pc.txt
+   28  cat info_pc.txt
+   29  git add 
+   30  git add .
+   31  git commit -m "feat: Añadiendo información de CPU"
+   32  grep -v "nologin" /etc/passwd | head -n10 | sort -t ":" -k7 > lista_ordenada.txt
+   33  cat lista_ordenada.txt
+   34  git add .
+   35  git commit -m "ADD: Listado de usuarios ordenada"
+   36  cat >> README.md << EOF
+   37  Alumno: Lautaro Sanabria Division: 116 Turno: mañana EOF
+   38  cat README.md
+   39  cat README.md
+   40  git add .
+   41  git commit -m "docs: actualización README"
+   42  mkdir -p TP1/arquitectura/Clase{1..5} TP1/so/Clase{1..6}
+   43  tree
+   44  sudo apt install tree -y
+   45  nano script_dir.sh
+   46  chmod +x script_dir.sh
+   47  ./script_dir.sh
+   48  git add .
+   49  git commit -m "ADD: Añadiendo script"
+   50  history -a
+   51  cp ../../../.bash_history Historial_comandos_SanabriaLautaro.txt
+   52  git add .
+   53  git commit -m "feat: agregado historial de comandos"
+   54  git push
+   55  exit
+   56  history
+   57  cd ~/repogit/TP_AySO
+   58  ls
+   59  find . -name "*Historial*"
+   60  history > Historial_comandos_SanabriaLautaro.txt
